@@ -3,9 +3,9 @@ const {
   calcFuelFor,
   calcFuelForInclusive,
   calcTotalFuelFor,
-} = require('./functions');
+} = require('./fuel-calculators');
 
-const input = fs.readFileSync('./input.data', 'utf8')
+const input = fs.readFileSync('./day01.data', 'utf8')
 
 const answerP1 = input
   .trim()

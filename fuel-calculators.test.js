@@ -2,7 +2,7 @@ const {
   calcFuelFor,
   calcFuelForInclusive,
   calcTotalFuelFor,
-} = require('./functions');
+} = require('./fuel-calculators');
 
 describe("#calcFuelFor", () => {
   test("a mass of 9 requires a fuel of 1", () => {
