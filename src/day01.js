@@ -1,24 +1,26 @@
 const fs = require('fs');
 const {
   calcFuelFor,
-  calcFuelForInclusive,
   calcTotalFuelFor,
 } = require('./fuel-calculators');
 
-const input = fs.readFileSync('./day01.data', 'utf8')
+const input = fs.readFileSync('./src/day01.data', 'utf8');
 
-const answerP1 = input
-  .trim()
-  .split("\n")
-  .reduce((acc, mass) => {
-    return acc + calcFuelFor(parseInt(mass));
-  }, 0);
-console.log('Answer D01-P01', answerP1);
+module.exports = {
+  part1,
+  part2,
+};
 
-const answerP2 = input
-  .trim()
-  .split("\n")
-  .reduce((acc, mass) => {
-    return acc + calcTotalFuelFor(parseInt(mass))
-  }, 0);
-console.log('Answer D01-P02', answerP2);
+function part1() {
+  return input
+    .trim()
+    .split('\n')
+    .reduce((acc, mass) => acc + calcFuelFor(parseInt(mass)), 0);
+}
+
+function part2() {
+  return input
+    .trim()
+    .split('\n')
+    .reduce((acc, mass) => acc + calcTotalFuelFor(parseInt(mass)), 0);
+}
