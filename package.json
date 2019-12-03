@@ -1,17 +1,21 @@
 {
   "name": "advent-of-code-2019-day1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/run.js",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.0",
     "jest": "^24.9.0"
+  },
+  "scripts": {
+    "day": "node src/run.js"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.17.1"
   }

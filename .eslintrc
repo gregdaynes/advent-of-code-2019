@@ -1,5 +1,6 @@
 {
   "extends": "airbnb-base",
+  "plugins": ["jest", "prettier"],
   "rules": {
     "prefer-destructuring": ["error", {
       "array": false,
@@ -7,6 +8,11 @@
     }, {
       "enforceForRenamedProperties": false
     }],
-    "no-console": "off"
+    "no-console": "off",
+    "no-use-before-define": "off",
+    "radix": "off"
+  },
+  "env": {
+    "jest": true
   }
 }

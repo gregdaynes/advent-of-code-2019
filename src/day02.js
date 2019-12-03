@@ -5,6 +5,11 @@ const {
   prepareIntcode,
 } = require('./ship-computer');
 
+module.exports = {
+  part1,
+  part2,
+};
+
 function replaceIntcodePoints(input, replacements) {
   const intcode = prepareIntcode(input);
 
@@ -15,17 +20,15 @@ function replaceIntcodePoints(input, replacements) {
   return intcode;
 }
 
-function puzzle1() {
-  const input = fs.readFileSync('./day02.data', 'utf8');
+function part1() {
+  const input = fs.readFileSync('./src/day02.data', 'utf8');
   const newIntcode = replaceIntcodePoints(input, [[1, 12], [2, 2]]);
 
   return compute(newIntcode)[0];
 }
-const answerP1 = puzzle1();
-console.log('Answer D02-P01', answerP1, answerP1 === 3166704);
 
-function puzzle2() {
-  const input = fs.readFileSync('./day02.data', 'utf8');
+function part2() {
+  const input = fs.readFileSync('./src/day02.data', 'utf8');
 
   let foundNoun;
   let foundVerb;
@@ -46,6 +49,3 @@ function puzzle2() {
 
   return 100 * foundNoun + foundVerb;
 }
-const answerP2 = puzzle2();
-console.log('Answer D02-P02', answerP2, answerP2 === 8018);
-
